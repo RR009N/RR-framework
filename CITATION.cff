@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "RR-framework: Business Resilience and Digital Maturity Assessment Workbook"
+message: "If you use this workbook or methodology, please cite it as below."
+type: software
+authors:
+  - family-names: "Reznikov"
+    given-names: "Roman"
+year: 2026
+version: "1.0"
+date-released: "2026-06-07"
+license: "CC-BY-NC-SA-4.0"
+repository-code: "https://github.com/YOUR-ACCOUNT/RR-framework"
+abstract: "RR-framework is an Excel-based business resilience and digital maturity assessment workbook for evaluating process maturity, digitalization, resilience, crisis exposure, risks, strategy packages, and initiative roadmaps."
+keywords:
+  - business resilience
+  - digital maturity
+  - crisis management
+  - risk assessment
+  - strategy roadmap
+  - organizational maturity
+  - Excel assessment tool

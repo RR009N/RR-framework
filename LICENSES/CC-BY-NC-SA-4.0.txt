@@ -1,0 +1,11 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+
+SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+This repository uses the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License for the workbook, methodology, documentation, questionnaire, scoring logic, risk library, strategy package logic, and other non-code materials.
+
+Full legal code:
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+Human-readable summary:
+https://creativecommons.org/licenses/by-nc-sa/4.0/

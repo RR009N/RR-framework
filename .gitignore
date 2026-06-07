@@ -1,0 +1,21 @@
+# Temporary files
+~$*.xlsx
+*.tmp
+*.bak
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local notes
+local/
+private/
+client-data/
+completed-assessments/
+
+# Python cache, if scripts are added later
+__pycache__/
+*.pyc
+.venv/
+venv/
