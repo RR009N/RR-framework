@@ -1,4 +1,5 @@
 # RR-framework
+[![DOI](https://zenodo.org/badge/1262222190.svg)](https://doi.org/10.5281/zenodo.20583865)
 
 **RR-framework** is an open, Excel-based business resilience and digital maturity assessment workbook created by Roman Reznikov.
 
