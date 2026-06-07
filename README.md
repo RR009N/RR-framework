@@ -77,11 +77,12 @@ See [LICENSE.md](LICENSE.md) and [NOTICE.md](NOTICE.md).
 
 ## Citation
 
-If you use this workbook or methodology in research, education, consulting materials, or public documentation, please cite it using the metadata in [CITATION.cff](CITATION.cff).
+If you use RR-framework in research, consulting, education, or organizational assessment, please cite it as:
 
-Recommended citation:
+Roman Reznikov. RR-framework: Business Resilience and Digital Maturity Assessment Workbook. Version 1.0. Zenodo. https://doi.org/10.5281/zenodo.20583866
 
-> Reznikov, Roman. RR-framework: Business Resilience and Digital Maturity Assessment Workbook. Version 1.0, 2026.
+Concept DOI: https://doi.org/10.5281/zenodo.20583865  
+Version DOI: https://doi.org/10.5281/zenodo.20583866
 
 ## Disclaimer
 
