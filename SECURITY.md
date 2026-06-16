@@ -6,7 +6,8 @@ RR-framework is an Excel-based methodology and diagnostic workbook. It may be us
 
 | Version | Supported |
 |---|---|
-| 1.0 | Yes |
+| 1.67 | Yes |
+| < 1.67 | No |
 
 ## Reporting security issues
 
@@ -29,4 +30,4 @@ Use anonymized examples only.
 
 ## Macro policy
 
-The current workbook is intended to work without macros. Users should be cautious with any modified version that introduces macros, external connections, or scripts.
+The workbook is intended to work without macros and ships as a standard `.xlsx`. Users should be cautious with any modified version that introduces macros, external connections, or scripts.

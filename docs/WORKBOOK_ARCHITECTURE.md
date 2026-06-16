@@ -1,91 +1,66 @@
-# Workbook Architecture
+# Workbook Architecture (v1.67)
 
-RR-framework is organized into client-facing, input, admin, and technical layers.
+RR-framework v1.67 uses a consolidated 28-tab structure: **11 visible workflow tabs**, **13 hidden backend tabs**, and **4 very-hidden protected libraries**. The separation keeps the user journey simple while preserving the full calculation model. The START HERE sheet exposes this structure as a clickable navigation hub.
 
-## Client value layer
+## 1. Workflow layer (visible)
 
-These sheets deliver management value and should usually remain visible in a client edition:
+The user/consultant journey, in order:
 
-- Start Here
-- Company Profile
-- Crisis Simulator
-- Dashboard
-- Executive Strategy Packages
-- Executive Recommendations
-- Risk Summary
-- Initiatives Roadmap
-- Gantt Roadmap
-- Heatmaps
-- Spider Dashboards
-- Scoring Guide
+- **① START HERE** — navigation hub, recommended workflow, colour legend, version/build.
+- **Company Profile** — company context (industry, size, geography, concentrations). Input.
+- **Assessment Questions** — the consolidated 424-question assessment. Primary input.
+- **Scoring & Diagnostics** — maturity, confidence-adjusted scores, gaps, data-quality checks.
+- **AHP Domain Weights** — optional pairwise weight calibration (advanced).
+- **Crisis & Resilience** — crisis scenario, cascade logic, stress testing. Input (scenario + severity).
+- **Strategy Risk Recs** — risk summary, strategic posture, recommendations.
+- **Roadmap & Portfolio** — initiative prioritization (WSJF), economics, status, Gantt.
+- **Executive Dashboard** — consolidated executive view: maturity, risk, benchmarks, financial resilience.
+- **Standards & Coverage** — standards / framework mapping and traceability.
+- **Methodology & Governance** — methodology, scoring guide, version history, cascade logic, data-model change log.
 
-## Client input layer
+## 2. Data layer (hidden)
 
-These sheets collect assessment information:
+Normalized backend feeding scoring, engines, and outputs:
 
-- Strategy GTM
-- Governance Crisis
-- HR Workforce
-- Finance Procurement
-- Legal Risk
-- Physical Safety
-- Delivery Ops
-- Supply Chain
-- Manufacturing MES
-- Sales CRM
-- Marketing Comms
-- IT Cloud DR
-- Business Systems
-- Data BI AI
-- Cyber Privacy
-- Quality Portfolio
-- Company Geography
+- **_DATA_Questions_Normalized** — canonical one-row-per-question table.
+- **_DATA_Executive_Dashboard** — dashboard data mart / aggregated KPIs.
 
-## Consultant and admin layer
+## 3. Configuration & assumptions (hidden)
 
-These sheets support model review, scoring audit, methodology review, quality control, and calibration.
+Tunable inputs and reference data:
 
-Examples:
+- **_TECH_Scoring_Settings** — confidence factors, risk appetite, and centralized calibration parameters (`cfg_*`).
+- **_TECH_Industry_Templates** — per-industry target maturities.
+- **_TECH_Industry_Strategy_Fit** — industry-to-strategy fit weighting.
+- **_TECH_Profile_Lists** — dropdown / picklist source values.
+- **_TECH_Benchmarks** — seed peer benchmarks.
+- **_TECH_Financial_Anchors** — financial anchors & monetization mapping.
 
-- Improved Scoring Model
-- Scoring Model v2
-- AHP Domain Weights
-- Quality Control
-- Standards Map
-- Standards per Question
-- Methodology and Logic
-- Cascade Engine Methodology
+## 4. Engines & libraries (hidden / very-hidden, protected)
 
-## Technical engine layer
+The calculation engines and vocabularies. Do not edit:
 
-These sheets should normally be hidden or very hidden in a client edition:
+- **_TECH_Crisis_Model**, **_TECH_Cascade_Engine**, **_TECH_Crisis_Links**, **_TECH_Dependency_Map** — resilience / cascade engine.
+- **Recommendation Matrix**, **Risk Library**, **_TECH_Strategy_Library**, **_TECH_Strategy_Packages** — risk & strategy logic.
+- **_TECH_Initiative_Library** — initiative catalogue / roadmap engine.
 
-- Risk Library
-- Recommendation Matrix
-- Industry Templates
-- Scoring Settings
-- Crisis Model
-- Strategy Library
-- Strategy Packages
-- Initiative Library
-- Profile Lists
-- Dependency Map
-- Cascade Engine
+## Named ranges and parameters
+
+- `qn_*` — named ranges over the normalized question columns (data layer), used by diagnostics.
+- `cfg_*` — centralized calibration thresholds in `_TECH_Scoring_Settings` (e.g. crisis-severity cutoffs, industry-priority thresholds, timeline buckets, strategy scaling). Recalibrate here in one place.
 
 ## Recommended editions
 
 | Edition | Purpose | Visible sheets |
 |---|---|---|
-| Client Edition | For client workshops and results review. | Client value layer and input layer. |
-| Consultant Edition | For methodology review and model configuration. | All sheets. |
-| Public Demo Edition | For GitHub release and learning. | Client value layer, input layer, documentation sheets, protected technical logic. |
+| Client Edition | Workshops and results review. | Workflow layer. |
+| Consultant Edition | Methodology review and configuration. | All sheets (unhide backend). |
+| Public Demo Edition | GitHub release and learning. | Workflow layer + protected technical logic. |
 
 ## Design principle
 
-The client should see a simple journey:
-
 ```text
-Profile → Assessment → Crisis Simulation → Results → Strategy Packages → Roadmap
+START HERE → Company Profile → Assessment Questions → Crisis & Resilience → Scoring & Diagnostics → Strategy Risk Recs → Roadmap & Portfolio → Executive Dashboard
 ```
 
-The technical model should remain available for transparency, but it should not overload normal users.
+User input, normalized data, calculation engines, and executive outputs are separated to reduce tab count without losing logic. Backend and engine sheets stay hidden/very-hidden for transparency without overloading normal users.

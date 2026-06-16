@@ -4,98 +4,50 @@ This guide explains how to use RR-framework as an assessment workbook.
 
 ## Recommended software
 
-Use Microsoft Excel desktop for the best experience. Some charts, protections, formulas, and workbook features may not behave identically in online spreadsheet editors.
+Use Microsoft Excel desktop for the best experience. Some charts, formulas, and workbook features may not behave identically in online spreadsheet editors.
+
+## Navigation
+
+Open the workbook on the **① START HERE** sheet. It contains a colour-coded navigation hub: click **▶ open** next to any sheet to jump to it. Every visible sheet has a header band with its purpose, a short note on what you can and cannot edit, and a **⌂ START HERE** link to return.
+
+Convention: edit **coloured input cells only**; everything else is formula-driven.
 
 ## Assessment workflow
 
 ### Step 1: Open the workbook
 
-Open `workbook/RR-framework_v1.0.xlsx`.
-
-Check the Start Here page and confirm the version:
+Open `workbook/RR-framework_v1.67.xlsx` and confirm on START HERE:
 
 - Framework: RR-framework
-- Version: 1.0
-- Build ID: RR-FRAMEWORK-v1.0-20260607
+- Version: 1.67
+- Build ID: RR-FRAMEWORK-v1.67-20260616
 - License: CC BY-NC-SA 4.0
 
 ### Step 2: Complete Company Profile
 
-Fill the Company Profile sheet using the dropdown options.
+Fill the **Company Profile** sheet using the dropdowns. Key fields include industry template, ownership type, revenue size band, operating and revenue model, customer/supplier concentration, workforce distribution, critical locations/processes/products, crisis history, and default confidence settings. These influence how the workbook interprets scores, risks, crisis exposure, and strategy packages.
 
-Key profile fields include:
+### Step 3: Complete the assessment
 
-- Industry template.
-- Ownership type.
-- Revenue size band.
-- Operating model.
-- Revenue model.
-- Customer concentration.
-- Supplier concentration.
-- Workforce distribution.
-- Critical locations.
-- Critical processes.
-- Critical products and services.
-- Crisis history.
-- Default confidence settings.
-
-These answers influence how the workbook interprets scores, risks, crisis exposure, and strategy packages.
-
-### Step 3: Complete domain questionnaires
-
-Complete the relevant assessment sheets. Each domain captures a different aspect of organizational maturity and resilience.
-
-Typical input sheets include:
-
-- Strategy GTM
-- Governance Crisis
-- HR Workforce
-- Finance Procurement
-- Legal Risk
-- Physical Safety
-- Delivery Ops
-- Supply Chain
-- Manufacturing MES
-- Sales CRM
-- Marketing Comms
-- IT Cloud DR
-- Business Systems
-- Data BI AI
-- Cyber Privacy
-- Quality Portfolio
-- Company Geography
-
-Use the scoring guide before answering.
+Answer on the **Assessment Questions** sheet (the consolidated 424-question surface). Edit only the input columns (answer / coverage / confidence / comment). Each question uses a two-field answer: STAGE (0–5 wording) × COVERAGE (how widely deployed), further adjusted by confidence. Use the scoring guide on Methodology & Governance before answering.
 
 ### Step 4: Select a crisis scenario
 
-Open the Crisis Simulator and select:
-
-- Crisis scenario.
-- Severity level.
-
-The workbook uses this selection to adjust risk priorities, strategy package relevance, and initiative priorities.
+On **Crisis & Resilience**, select a crisis scenario and severity. This adjusts risk priorities, strategy relevance, and initiative priority via the cascade engine.
 
 ### Step 5: Review outputs
 
-Recommended output sheets:
-
-- Dashboard
-- Executive Strategy Packages
-- Executive Recommendations
-- Risk Summary
-- Initiatives Roadmap
-- Gantt Roadmap
-- Heatmaps
-- Spider Dashboards
+- **Scoring & Diagnostics** — maturity, gaps, data-quality flags.
+- **Strategy Risk Recs** — risk summary, strategic posture, recommendations.
+- **Roadmap & Portfolio** — WSJF prioritization, status, Gantt.
+- **Executive Dashboard** — consolidated executive view.
+- **Standards & Coverage** — traceability to standards/frameworks.
 
 ### Step 6: Interpret the results
 
-Use outputs as a structured management discussion tool. Scores indicate maturity and potential exposure, but they are not formal audit results.
+Use outputs as a structured management discussion tool. Scores indicate maturity and potential exposure; they are not formal audit results.
 
 ## Scoring scale
-
-The visible scale is 0 to 5.
 
 | Score | Meaning |
 |---:|---|
@@ -108,13 +60,13 @@ The visible scale is 0 to 5.
 
 ## Evidence and confidence
 
-Where confidence fields are used, select evidence and assessor confidence carefully.
+Where confidence fields are used, select evidence and assessor confidence carefully. High scores without evidence should be treated cautiously (the Scoring & Diagnostics sheet flags these).
 
-High scores without evidence should be treated cautiously.
+## Advanced: calibration
+
+Advanced users/consultants can tune the model in one place: open `_TECH_Scoring_Settings` (unhide it) and adjust the centralized `cfg_*` calibration parameters (crisis-severity cutoffs, industry-priority thresholds, timeline buckets, strategy scaling). Optional pairwise domain weighting is on **AHP Domain Weights**.
 
 ## Recommended operating model
-
-For a serious assessment, use a workshop approach:
 
 1. Assign domain owners.
 2. Collect initial responses.
