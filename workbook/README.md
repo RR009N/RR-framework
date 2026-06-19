@@ -4,7 +4,7 @@ This folder contains the public Excel release of RR-framework.
 
 Current file:
 
-- `RR-framework_v1.67.xlsx`
+- `RR-framework_v2.0.xlsx`
 
 Before using the workbook, review:
 

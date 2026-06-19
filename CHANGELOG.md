@@ -6,6 +6,29 @@ The format is inspired by Keep a Changelog, and this project uses semantic versi
 
 Intermediate iterations 1.1 through 1.5 are documented in detail inside the workbook on the **Methodology & Governance** sheet (Version & Release History). They are summarized here under 1.67.
 
+## [2.0] - 2026-06-19
+
+### Changed
+
+- Major architecture refactor: consolidated to a layered 20-tab structure (9 visible workflow sheets, 7 hidden data/config/reference sheets, 4 very-hidden protected engines), replacing the previous mixed 28-tab layout.
+- Strict naming convention introduced to separate concerns: `_DATA_*` (normalized facts), `_ENGINE_*` (Risk, Crisis, Strategy, Initiatives, Fuzzy posture), `_CONFIG_*` (model settings, risk calibration), `_REF_*` (reference content).
+- Visible journey simplified to a linear six-step workflow: Company Profile -> Assessment Questions -> AS-IS Assessment -> Resilience & Risk Scenario -> Action Plan & Roadmap -> Model Calibration.
+- Calibration centralized into a single source of truth (`_CONFIG_Model_Settings`, `_CONFIG_Risk_Calibration`); duplicated parameters removed.
+
+### Added
+
+- Native Excel Tables on the two growth lists: `tblInitiatives` on `_ENGINE_Initiatives` (A4:BY76) and `tblStrategy` on `_ENGINE_Strategy` (A4:AR18), so new rows auto-extend column formulas.
+
+### Verified
+
+- 55,096 formulas with zero `#REF!` and no broken references to former sheet names after the rename.
+- Original `RecommendationMatrixTable` preserved; data validations, conditional formatting, chart, drawings, and comments intact.
+- Opened and re-saved cleanly by Microsoft Excel and LibreOffice (headless) with no repair prompt; all three tables recognized as valid.
+
+### Notes
+
+- Intermediate internal builds between 1.67 and 2.0 are summarized here and documented inside the workbook on the methodology sheet.
+
 ## [1.67] - 2026-06-16
 
 ### Added

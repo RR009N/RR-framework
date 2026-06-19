@@ -6,8 +6,8 @@ RR-framework is an Excel-based methodology and diagnostic workbook. It may be us
 
 | Version | Supported |
 |---|---|
-| 1.67 | Yes |
-| < 1.67 | No |
+| 2.0 | Yes |
+| < 2.0 | No |
 
 ## Reporting security issues
 

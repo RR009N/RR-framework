@@ -6,10 +6,10 @@ authors:
   - family-names: "Reznikov"
     given-names: "Roman"
 year: 2026
-version: "1.67"
-date-released: "2026-06-16"
+version: "2.0"
+date-released: "2026-06-19"
 license: "CC-BY-NC-SA-4.0"
-repository-code: "https://github.com/YOUR-ACCOUNT/RR-framework"
+repository-code: "https://github.com/RR009N/RR-framework"
 abstract: "RR-framework is an Excel-based business resilience and digital maturity assessment workbook for evaluating process maturity, digitalization, resilience, crisis exposure, risks, strategy packages, and initiative roadmaps."
 keywords:
   - business resilience

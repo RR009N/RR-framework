@@ -2,6 +2,8 @@
 
 RR-framework is designed as a practical business resilience and digital maturity assessment model. It combines structured company profiling, domain questionnaires, maturity scoring, industry-specific interpretation, risk logic, crisis simulation, recommendation logic, strategy packages, and roadmap prioritization.
 
+> **Where this lives in v2.0:** the conceptual flow below is implemented across the layered workbook — inputs on Company Profile and Assessment Questions; current state on AS-IS Assessment; scenario adjustment and fuzzy posture on Resilience & Risk Scenario; recommendations, strategy packages, and initiatives on Action Plan & Roadmap. The calculation itself runs in the protected `_ENGINE_*` sheets, with parameters in `_CONFIG_*`. See WORKBOOK_ARCHITECTURE.md.
+
 ## Core logic
 
 The model follows this flow:

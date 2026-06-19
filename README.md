@@ -4,8 +4,8 @@
 
 The workbook helps organizations assess how mature, digitalized, and crisis-ready they are across business functions. It combines company context, a consolidated assessment, industry templates, crisis simulation, risk logic, executive strategy packages, recommendations, and implementation roadmaps.
 
-Current version: **v1.67**  
-Build ID: **RR-FRAMEWORK-v1.67-20260616**  
+Current version: **v2.0**  
+Build ID: **RR-FRAMEWORK-v2.0-20260619**  
 License: **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**  
 SPDX License ID: **CC-BY-NC-SA-4.0**  
 Copyright: **(C) Roman Reznikov**
@@ -22,18 +22,19 @@ RR-framework helps assess:
 - Key risks created by low maturity or weak controls.
 - Executive-level strategy packages.
 - Prioritized initiatives and roadmap waves.
-- Heatmaps, dashboards, Gantt roadmap, and quality-control indicators.
+- Heatmaps, dashboards, and quality-control indicators.
 
-## What's new in v1.67
+## What's new in v2.0
 
-- **Navigation hub** on the START HERE sheet: a grouped, colour-coded, clickable index of every tab.
-- **Uniform headers** on every visible sheet: purpose, edit guidance, and a one-click link back to START HERE.
-- **Centralized calibration** (`cfg_*` parameters) and **named ranges** (`qn_*`) for transparency and easier tuning.
-- **Engine cleanup**: strategy scoring refactored to `SUMPRODUCT`, diagnostics rebuilt as `COUNTIFS`.
-- **Tighter error handling**: 2,650 lookup guards moved from `IFERROR` to `IFNA`.
-- **Bug fixes** in the risk-prioritization layer (crisis multiplier, WSJF division guards, diagnostics ranges, self-references), verified by a full recalculation audit on a blank template and three filled industry samples.
+v2.0 is a major **architecture refactor and integrity-hardening** release. The calculation model is preserved, but the workbook is rebuilt on a clean, layered structure that is easier to navigate, audit, and extend.
 
-See [CHANGELOG.md](CHANGELOG.md) and [RELEASE_NOTES_v1.67.md](RELEASE_NOTES_v1.67.md).
+- **Layered architecture (20 tabs).** Consolidated to **9 visible workflow sheets**, **7 hidden data/config sheets**, and **4 very-hidden protected engines**, replacing the previous mixed 28-tab layout. A strict naming convention separates concerns: `_DATA_*` (normalized facts), `_ENGINE_*` (Risk, Crisis, Strategy, Initiatives, Fuzzy posture), `_CONFIG_*` (model settings, risk calibration), `_REF_*` (reference content).
+- **Linear workflow.** The visible journey is a clean six-step path: Company Profile -> Assessment Questions -> AS-IS Assessment -> Resilience & Risk Scenario -> Action Plan & Roadmap -> Model Calibration.
+- **Single source of truth.** All tunable parameters live in `_CONFIG_Model_Settings` and `_CONFIG_Risk_Calibration`; engines and presentation no longer duplicate calibration.
+- **Structured Excel Tables.** The two growth lists - `_ENGINE_Initiatives` (`tblInitiatives`) and `_ENGINE_Strategy` (`tblStrategy`) - are now native Excel Tables, so adding initiatives or strategies auto-extends the column formulas. This is the foundation for the upcoming dynamic-range and quantitative-modeling work.
+- **Integrity verified.** 55,096 formulas with **zero `#REF!`** and no broken cross-sheet references after the rename; the original `RecommendationMatrixTable` is preserved; data validations, conditional formatting, the chart, drawings, and comments are intact. The file opens cleanly in Microsoft Excel and LibreOffice with no repair prompt.
+
+See [CHANGELOG.md](CHANGELOG.md) and [RELEASE_NOTES_v2.0.md](RELEASE_NOTES_v2.0.md). Earlier public history is in [RELEASE_NOTES_v1.67.md](RELEASE_NOTES_v1.67.md).
 
 ## Who can use it
 
@@ -49,23 +50,24 @@ The workbook is intended for diagnostic and advisory use. It is not a formal cer
 Typical use flow:
 
 1. Open the workbook in Microsoft Excel desktop.
-2. Start on the **START HERE** sheet and use the navigation hub.
+2. Start on the **① START HERE** sheet and follow the recommended flow.
 3. Complete the **Company Profile**.
 4. Answer the **Assessment Questions**.
-5. Select a crisis scenario and severity on **Crisis & Resilience**.
-6. Review **Scoring & Diagnostics**, **Strategy Risk Recs**, **Roadmap & Portfolio**, and the **Executive Dashboard**.
-7. Use the results as a structured input for management discussion and resilience planning.
+5. Review **AS-IS Assessment** (current-state maturity, gaps, data quality).
+6. Select a crisis scenario and severity on **Resilience & Risk Scenario**.
+7. Review **Action Plan & Roadmap** for recommendations, prioritized initiatives, and waves.
+8. Use the results as a structured input for management discussion and resilience planning.
 
 ## Workbook structure
 
-The 28-tab workbook is organized into four logical layers (visible on the START HERE navigation hub):
+The 20-tab workbook is organized into four logical layers:
 
-| Layer | Purpose |
-|---|---|
-| Workflow (visible) | START HERE, Company Profile, Assessment Questions, Scoring & Diagnostics, AHP Domain Weights, Crisis & Resilience, Strategy Risk Recs, Roadmap & Portfolio, Executive Dashboard, Standards & Coverage, Methodology & Governance. |
-| Data layer (hidden) | Normalized question table and dashboard data mart. |
-| Config & assumptions (hidden) | Scoring settings, calibration parameters, industry templates, benchmarks, financial anchors, picklists. |
-| Engines & libraries (protected) | Crisis/cascade model, risk and strategy libraries, recommendation matrix, initiative library. |
+| Layer | Visibility | Sheets |
+|---|---|---|
+| Workflow | Visible (9) | ① START HERE, Release & QA, Methodology Controls & Std, Company Profile, Assessment Questions, AS-IS Assessment, Resilience & Risk Scenario, Action Plan & Roadmap, Model Calibration. |
+| Data layer | Hidden | `_DATA_Assessment_Model`, `_DATA_Dashboard_Facts`, `_DATA_Mappings`. |
+| Config & reference | Hidden | `_CONFIG_Model_Settings`, `_CONFIG_Risk_Calibration`, `_REF_Model_Content`, `_ENGINE_Fuzzy_Posture`. |
+| Engines (protected) | Very hidden | `_ENGINE_Risk`, `_ENGINE_Crisis`, `_ENGINE_Strategy`, `_ENGINE_Initiatives`. |
 
 More details are in [docs/WORKBOOK_ARCHITECTURE.md](docs/WORKBOOK_ARCHITECTURE.md).
 
@@ -91,7 +93,7 @@ If you use this workbook or methodology in research, education, consulting mater
 
 Recommended citation:
 
-> Reznikov, Roman. RR-framework: Business Resilience and Digital Maturity Assessment Workbook. Version 1.67, 2026.
+> Reznikov, Roman. RR-framework: Business Resilience and Digital Maturity Assessment Workbook. Version 2.0, 2026. https://github.com/RR009N/RR-framework
 
 ## Disclaimer
 
@@ -111,10 +113,11 @@ See [DISCLAIMER.md](DISCLAIMER.md).
 ├── DISCLAIMER.md
 ├── CONTRIBUTING.md
 ├── SECURITY.md
+├── RELEASE_NOTES_v2.0.md
 ├── RELEASE_NOTES_v1.67.md
 ├── VERSION
 ├── workbook/
-│   └── RR-framework_v1.67.xlsx
+│   └── RR-framework_v2.0.xlsx
 ├── releases/
 │   └── checksums.txt
 └── docs/

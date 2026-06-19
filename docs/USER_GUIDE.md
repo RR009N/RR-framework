@@ -8,19 +8,19 @@ Use Microsoft Excel desktop for the best experience. Some charts, formulas, and 
 
 ## Navigation
 
-Open the workbook on the **① START HERE** sheet. It contains a colour-coded navigation hub: click **▶ open** next to any sheet to jump to it. Every visible sheet has a header band with its purpose, a short note on what you can and cannot edit, and a **⌂ START HERE** link to return.
+Open the workbook on the **① START HERE** sheet. It shows the recommended flow and the version/build. Work left to right through the visible workflow sheets.
 
-Convention: edit **coloured input cells only**; everything else is formula-driven.
+Convention: edit **coloured input cells only**; everything else is formula-driven. Backend sheets (`_DATA_*`, `_CONFIG_*`, `_REF_*`) are hidden and the calculation engines (`_ENGINE_*`) are very hidden and protected.
 
 ## Assessment workflow
 
 ### Step 1: Open the workbook
 
-Open `workbook/RR-framework_v1.67.xlsx` and confirm on START HERE:
+Open `workbook/RR-framework_v2.0.xlsx` and confirm on START HERE:
 
 - Framework: RR-framework
-- Version: 1.67
-- Build ID: RR-FRAMEWORK-v1.67-20260616
+- Version: 2.0
+- Build ID: RR-FRAMEWORK-v2.0-20260619
 - License: CC BY-NC-SA 4.0
 
 ### Step 2: Complete Company Profile
@@ -29,21 +29,21 @@ Fill the **Company Profile** sheet using the dropdowns. Key fields include indus
 
 ### Step 3: Complete the assessment
 
-Answer on the **Assessment Questions** sheet (the consolidated 424-question surface). Edit only the input columns (answer / coverage / confidence / comment). Each question uses a two-field answer: STAGE (0–5 wording) × COVERAGE (how widely deployed), further adjusted by confidence. Use the scoring guide on Methodology & Governance before answering.
+Answer on the **Assessment Questions** sheet (the consolidated 424-question surface). Edit only the input columns (answer / coverage / confidence / comment). Each question uses a two-field answer: STAGE (0–5 wording) × COVERAGE (how widely deployed), further adjusted by confidence. Use the scoring guide on **Methodology, Controls & Std** before answering.
 
-### Step 4: Select a crisis scenario
+### Step 4: Review the current state
 
-On **Crisis & Resilience**, select a crisis scenario and severity. This adjusts risk priorities, strategy relevance, and initiative priority via the cascade engine.
+Open **AS-IS Assessment** to see current-state maturity, gaps versus industry targets, and data-quality signals (for example, high scores entered without evidence).
 
-### Step 5: Review outputs
+### Step 5: Select a crisis scenario
 
-- **Scoring & Diagnostics** — maturity, gaps, data-quality flags.
-- **Strategy Risk Recs** — risk summary, strategic posture, recommendations.
-- **Roadmap & Portfolio** — WSJF prioritization, status, Gantt.
-- **Executive Dashboard** — consolidated executive view.
-- **Standards & Coverage** — traceability to standards/frameworks.
+On **Resilience & Risk Scenario**, select a crisis scenario and severity. This adjusts risk priorities, strategy relevance, initiative priority, and the fuzzy resilience posture via the crisis and cascade engines.
 
-### Step 6: Interpret the results
+### Step 6: Review the action plan
+
+Open **Action Plan & Roadmap** for recommendations, WSJF-prioritized initiatives, and roadmap waves. Standards/controls traceability is on **Methodology, Controls & Std**.
+
+### Step 7: Interpret the results
 
 Use outputs as a structured management discussion tool. Scores indicate maturity and potential exposure; they are not formal audit results.
 
@@ -60,11 +60,16 @@ Use outputs as a structured management discussion tool. Scores indicate maturity
 
 ## Evidence and confidence
 
-Where confidence fields are used, select evidence and assessor confidence carefully. High scores without evidence should be treated cautiously (the Scoring & Diagnostics sheet flags these).
+Where confidence fields are used, select evidence and assessor confidence carefully. High scores without evidence should be treated cautiously (the AS-IS Assessment view flags these).
 
 ## Advanced: calibration
 
-Advanced users/consultants can tune the model in one place: open `_TECH_Scoring_Settings` (unhide it) and adjust the centralized `cfg_*` calibration parameters (crisis-severity cutoffs, industry-priority thresholds, timeline buckets, strategy scaling). Optional pairwise domain weighting is on **AHP Domain Weights**.
+Advanced users/consultants tune the model from **Model Calibration**, which points to the configuration layer:
+
+- `_CONFIG_Model_Settings` — confidence factors, risk appetite, objective/strategic weights, financial anchors, and calibration thresholds (crisis-severity cutoffs, industry-priority thresholds, timeline buckets, strategy scaling).
+- `_CONFIG_Risk_Calibration` — per-domain exposure, incident history, evidence uncertainty, dependency/cascade scores, and red-line floors.
+
+Unhide these sheets only if you intend to recalibrate.
 
 ## Recommended operating model
 
@@ -73,7 +78,7 @@ Advanced users/consultants can tune the model in one place: open `_TECH_Scoring_
 3. Review evidence.
 4. Discuss disagreement.
 5. Adjust scores only when evidence supports the change.
-6. Review dashboard and roadmap with leadership.
+6. Review the action plan and roadmap with leadership.
 
 ## Limitations
 
