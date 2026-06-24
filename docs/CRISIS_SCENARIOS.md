@@ -1,59 +1,31 @@
 # Crisis Scenarios
 
-RR-framework includes crisis scenario logic to show how different disruptions can affect organizational risk, resilience, strategy priorities, and roadmap priorities.
+RR-framework v3.0 contains 12 crisis scenarios and 204 crisis × domain multiplier rows.
 
-## How crisis scenarios work
+## Scenarios
 
-A user selects a crisis scenario and severity level in the workbook. The model then applies scenario multipliers to relevant domains, risks, recommendations, strategy packages, and initiatives.
+1. War / geopolitical escalation
+2. Physical site loss
+3. Cyberattack / ransomware
+4. Cloud / SaaS outage
+5. Supply chain disruption
+6. Energy / utilities outage
+7. Natural disaster / climate shock
+8. Pandemic / workforce disruption
+9. Financial / liquidity shock
+10. Regulatory / compliance shock
+11. Demand shock
+12. Reputation crisis
 
-Conceptual formula:
+## How to use
 
-```text
-Scenario-Adjusted Exposure = Base Exposure * Crisis Scenario Multiplier * Severity Factor
-```
+Select a scenario and severity in **Resilience & Risk Scenario**. The engine applies crisis multipliers and relevance logic to risk exposure, fuzzy posture, strategy selection, and roadmap prioritization.
 
-## Typical crisis scenarios
 
-| Scenario | Typical affected areas |
-|---|---|
-| Economic downturn | Finance, sales, procurement, operations, workforce. |
-| War or geopolitical escalation | Geography, people, IT, physical safety, logistics, legal, supply chain. |
-| Pandemic or workforce availability crisis | HR, remote work, delivery, operations, customer communication, business systems. |
-| Natural disaster | Facilities, physical safety, logistics, IT continuity, supply chain, workforce availability. |
-| Physical infrastructure disruption | IT, cloud, facilities, operations, delivery, production. |
-| Energy crisis | Manufacturing, IT, facilities, logistics, operations, remote work. |
-| Cyberattack | Cybersecurity, IT, data, legal, operations, customer communication. |
-| Supply chain disruption | Procurement, suppliers, inventory, logistics, production, delivery. |
-| Regulatory shock | Legal, compliance, finance, IT, data, operations. |
-| Key customer loss | Sales, finance, delivery, GTM, customer retention. |
-| Regional sales decline | Sales, marketing, geography, revenue diversification, digital channels. |
 
-## Scenario outputs
+---
 
-A crisis scenario can affect:
-
-- Risk Summary.
-- Crisis Simulator.
-- Heatmaps.
-- Strategy Selection.
-- Executive Strategy Packages.
-- Executive Recommendations.
-- Initiative Roadmap.
-- Gantt Roadmap.
-
-## Interpretation
-
-A scenario does not predict the future. It helps the organization understand which weaknesses become more dangerous under a specific type of disruption.
-
-## Recommended workshop use
-
-Use the scenario module in a leadership workshop:
-
-1. Review baseline maturity.
-2. Select a crisis scenario.
-3. Select severity.
-4. Review exposed domains.
-5. Review triggered or intensified risks.
-6. Review strategy packages.
-7. Prioritize roadmap actions.
-8. Decide owners and timelines.
+**Attribution:** RR-framework v3.0 — Copyright (C) 2026 Roman Reznikov.  
+**Author:** Roman Reznikov. ORCID: https://orcid.org/0000-0001-5581-5651.  
+**DOI:** 10.5281/zenodo.20583866. Concept DOI: 10.5281/zenodo.20583865.  
+**License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0). Commercial use requires separate written permission.

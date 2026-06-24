@@ -1,49 +1,30 @@
 # FAQ
 
-## Is RR-framework a certification tool?
+## Is RR-framework free to use?
 
-No. It is a diagnostic and decision-support workbook. It does not provide certification or formal audit status.
+It is available under CC BY-NC-SA 4.0 for non-commercial use with attribution. Commercial use requires separate written permission.
 
-## Can I use it commercially?
+## What should I cite?
 
-Not under the default CC BY-NC-SA 4.0 license. Commercial consulting use, paid advisory delivery, resale, white-labeling, or integration into commercial products requires separate written permission from Roman Reznikov.
+Reznikov, R. (2026). *RR-framework v3.0: Business Resilience and Digital Maturity Assessment Workbook*. DOI: 10.5281/zenodo.20583866. ORCID: https://orcid.org/0000-0001-5581-5651.
 
-## Can I modify the workbook?
+## Does the workbook use macros?
 
-Yes, for non-commercial purposes, if you retain attribution and share derivative versions under the same license.
+No. v3.0 is a standard `.xlsx` workbook with no VBA/macros.
+
+## Does it need recalculation?
+
+Yes. For final filled reports, use Microsoft Excel desktop, enable automatic calculation, run full recalculation, and save.
 
 ## Can I remove the attribution footer?
 
-No. Attribution notices must be retained.
+No. Attribution notices, DOI, ORCID, copyright and license notices must be retained.
 
-## Does sheet protection prevent copying or rebranding?
 
-No. Excel protection helps prevent accidental edits. It is not a strong security mechanism. The real protection is license, attribution, release history, checksum, and public authorship record.
 
-## Does the workbook contain macros?
+---
 
-The public version is intended to work without macros.
-
-## Which Excel version should I use?
-
-Use Microsoft Excel desktop for the best compatibility.
-
-## Can Google Sheets open the workbook?
-
-It may open parts of the workbook, but formulas, protection, charts, and formatting may not work exactly as intended.
-
-## Can the model replace expert judgment?
-
-No. The workbook provides structured analysis. Results should be reviewed with evidence and professional judgment.
-
-## Can completed assessments be uploaded to GitHub issues?
-
-No. Do not upload confidential client data or completed assessments to public repositories.
-
-## How do I cite RR-framework?
-
-Use the recommended citation in `CITATION.cff`.
-
-## How do I verify the original file?
-
-Check the version, build ID, footer, custom document properties, GitHub release, and SHA256 checksum in `releases/checksums.txt`.
+**Attribution:** RR-framework v3.0 — Copyright (C) 2026 Roman Reznikov.  
+**Author:** Roman Reznikov. ORCID: https://orcid.org/0000-0001-5581-5651.  
+**DOI:** 10.5281/zenodo.20583866. Concept DOI: 10.5281/zenodo.20583865.  
+**License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0). Commercial use requires separate written permission.

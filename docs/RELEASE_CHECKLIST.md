@@ -1,56 +1,42 @@
 # Release Checklist
 
-Use this checklist before publishing a new version of RR-framework.
+## Workbook
 
-## Workbook checks
+- [x] Version set to v3.0.
+- [x] Build ID set to RR-FRAMEWORK-v3.0-20260624.
+- [x] Core properties updated.
+- [x] Custom properties updated.
+- [x] DOI present: 10.5281/zenodo.20583866.
+- [x] Concept DOI present: 10.5281/zenodo.20583865.
+- [x] ORCID present: https://orcid.org/0000-0001-5581-5651.
+- [x] Copyright present.
+- [x] License present.
+- [x] No external links.
+- [x] No macros/VBA.
+- [x] Formula error-token scan completed.
 
-- [ ] Workbook opens in Microsoft Excel desktop.
-- [ ] Workbook version is updated.
-- [ ] Build ID is updated.
-- [ ] Version History sheet is updated.
-- [ ] Footer is present on all sheets.
-- [ ] Copyright notice is present.
-- [ ] License notice is present.
-- [ ] Custom document properties are updated.
-- [ ] Hidden and very hidden technical sheets remain protected.
-- [ ] Workbook structure protection is enabled.
-- [ ] Company Profile dropdowns work.
-- [ ] Crisis Simulator dropdowns work.
-- [ ] Dashboard updates after input changes.
-- [ ] Risk Summary updates after input changes.
-- [ ] Strategy Packages update after input changes.
-- [ ] Gantt Roadmap is readable.
-- [ ] Heatmaps are readable.
-- [ ] No visible formula errors are present.
+## Package
 
-## Documentation checks
+- [x] README updated.
+- [x] CHANGELOG updated.
+- [x] RELEASE_NOTES_v3.0 added.
+- [x] CITATION.cff updated.
+- [x] Checksums generated.
+- [x] Documentation package refreshed.
 
-- [ ] README.md is updated.
-- [ ] LICENSE.md is current.
-- [ ] NOTICE.md is current.
-- [ ] CITATION.cff version is updated.
-- [ ] CHANGELOG.md is updated.
-- [ ] DISCLAIMER.md is current.
-- [ ] USER_GUIDE.md is current.
-- [ ] METHODOLOGY.md is current.
-- [ ] ADMIN_GUIDE.md is current.
-- [ ] DATA_DICTIONARY.md is current.
-- [ ] SCORING_LOGIC.md is current.
-- [ ] CRISIS_SCENARIOS.md is current.
-- [ ] FORMS_INTEGRATION.md is current.
+## Before publishing
 
-## Repository checks
+- [ ] Open workbook in Microsoft Excel desktop.
+- [ ] Run full recalculation with `Ctrl+Alt+F9`.
+- [ ] Save workbook.
+- [ ] Upload release to GitHub.
+- [ ] Confirm Zenodo DOI metadata.
 
-- [ ] Latest workbook is in `workbook/`.
-- [ ] SHA256 checksum is generated.
-- [ ] Git tag is created.
-- [ ] GitHub Release is created.
-- [ ] Release notes are added.
-- [ ] Zenodo DOI is created or updated, if used.
 
-## Privacy checks
 
-- [ ] No client data is included.
-- [ ] No personal data is included.
-- [ ] No confidential comments are included.
-- [ ] No private file paths are included.
+---
+
+**Attribution:** RR-framework v3.0 — Copyright (C) 2026 Roman Reznikov.  
+**Author:** Roman Reznikov. ORCID: https://orcid.org/0000-0001-5581-5651.  
+**DOI:** 10.5281/zenodo.20583866. Concept DOI: 10.5281/zenodo.20583865.  
+**License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0). Commercial use requires separate written permission.

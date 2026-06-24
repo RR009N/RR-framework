@@ -1,49 +1,44 @@
-# Roadmap
+# Roadmap Logic
 
-This roadmap describes the direction of RR-framework. It is indicative, not a commitment.
+RR-framework converts risk treatments and initiatives into roadmap waves.
 
-## Delivered in v2.0
+## Roadmap waves
 
-Focus: architecture refactor and structural foundation.
+- 0–90 days
+- 3–6 months
+- 6–12 months
+- 12+ months
 
-- Layered 20-tab architecture with strict `_DATA_*` / `_ENGINE_*` / `_CONFIG_*` / `_REF_*` naming.
-- Linear six-step visible workflow.
-- Single source of truth for calibration.
-- Native Excel Tables on the initiative and strategy lists (auto-extending).
-- Full integrity verification (zero `#REF!`; tables, validations, visuals preserved).
+## Prioritization
 
-## Next: content & dynamic-range cycle
+The roadmap is built from:
 
-Focus: make the model safely extensible, then grow it.
+- Risk reduction potential.
+- Business value.
+- Time criticality.
+- Opportunity enablement.
+- Job size / complexity.
+- Crisis relevance.
+- Industry applicability.
+- Capability mapping.
+- Maturity band treatment.
 
-- Define headers/target schema for `_ENGINE_Risk` and convert it to a structured Table.
-- Split and re-scope the `_DATA_Mappings` table (separate question-recommendation and initiative datasets).
-- Convert remaining engine input ranges to Tables or dynamic named ranges so downstream formulas auto-pick-up new rows.
-- Expand the risk, initiative, and strategy libraries (broader scenarios and sectors).
-- Add more industry templates and sample anonymized assessment data.
+## Future backlog after v3.0
 
-## Then: quantitative modeling cycle
+Recommended next calibration cycle:
 
-Focus: move from point estimates to distributions and network propagation, kept in native Excel where practical.
+1. Validate industry dropdown / template / alias synchronization.
+2. Extend regression set beyond 24 cases.
+3. Calibrate no-crisis / high-maturity behavior.
+4. Expand scenario-specific acceptance rules.
+5. Compare workbook outputs with expert/LLM benchmark outputs.
+6. Prepare web/backend import tests using `_API_Import_Contract`.
 
-- **Monte-Carlo crisis simulation** over the crisis engine: replace point multipliers with distributions and output a loss distribution with **VaR / CVaR** (tail risk) instead of a single peak value.
-- **Leontief cascade** (`(I − βM)^-1`) over the cross-domain dependency matrix for full multi-hop propagation, plus largest-eigenvalue (systemic-amplification) analysis.
-- **Markov posture dynamics**: model transitions across fuzzy resilience states over the course of a crisis and recovery.
-- **Constrained portfolio optimization** of initiatives (budget and change-capacity limits) via Solver, complementing WSJF ranking.
-- Global sensitivity (tornado / variance-based) on key drivers.
 
-## Later: collection and application
 
-Focus: controlled data collection and, eventually, application architecture.
+---
 
-- Google Forms / Microsoft Forms integration, respondent assignment, multi-respondent aggregation, disagreement and evidence-gap flags.
-- Client Edition and Consultant Edition separation.
-- Possible web-based assessment interface, database-backed storage, role-based access, automated dashboards, and an export/calculation API.
-
-## Not planned for the core public workbook
-
-- Commercial consulting templates.
-- Client-specific benchmarks.
-- Confidential assessment datasets.
-- Formal certification workflows.
-- Investment-grade valuation logic.
+**Attribution:** RR-framework v3.0 — Copyright (C) 2026 Roman Reznikov.  
+**Author:** Roman Reznikov. ORCID: https://orcid.org/0000-0001-5581-5651.  
+**DOI:** 10.5281/zenodo.20583866. Concept DOI: 10.5281/zenodo.20583865.  
+**License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0). Commercial use requires separate written permission.

@@ -5,10 +5,12 @@ type: software
 authors:
   - family-names: "Reznikov"
     given-names: "Roman"
+    orcid: "https://orcid.org/0000-0001-5581-5651"
 year: 2026
-version: "2.0"
-date-released: "2026-06-19"
+version: "3.0"
+date-released: "2026-06-24"
 license: "CC-BY-NC-SA-4.0"
+doi: "10.5281/zenodo.20583866"
 repository-code: "https://github.com/RR009N/RR-framework"
 abstract: "RR-framework is an Excel-based business resilience and digital maturity assessment workbook for evaluating process maturity, digitalization, resilience, crisis exposure, risks, strategy packages, and initiative roadmaps."
 keywords:
@@ -19,3 +21,14 @@ keywords:
   - strategy roadmap
   - organizational maturity
   - Excel assessment tool
+preferred-citation:
+  type: software
+  authors:
+    - family-names: "Reznikov"
+      given-names: "Roman"
+      orcid: "https://orcid.org/0000-0001-5581-5651"
+  title: "RR-framework v3.0: Business Resilience and Digital Maturity Assessment Workbook"
+  year: 2026
+  doi: "10.5281/zenodo.20583866"
+  version: "3.0"
+  date-released: "2026-06-24"

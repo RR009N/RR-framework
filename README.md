@@ -1,141 +1,102 @@
 # RR-framework
 
-**RR-framework** is an open, Excel-based business resilience and digital maturity assessment workbook created by Roman Reznikov.
+**RR-framework** is an open, Excel-based business resilience and digital maturity assessment workbook created by **Roman Reznikov**.
 
-The workbook helps organizations assess how mature, digitalized, and crisis-ready they are across business functions. It combines company context, a consolidated assessment, industry templates, crisis simulation, risk logic, executive strategy packages, recommendations, and implementation roadmaps.
+It helps organizations assess process maturity, digitalization, and resilience across business functions, then translate the assessment into crisis exposure, risk themes, strategy packages, prioritized initiatives, and roadmap waves.
 
-Current version: **v2.0**  
-Build ID: **RR-FRAMEWORK-v2.0-20260619**  
+Current version: **v3.0**  
+Build ID: **RR-FRAMEWORK-v3.0-20260624**  
+Release date: **2026-06-24**  
+Author ORCID: **https://orcid.org/0000-0001-5581-5651**  
+DOI: **10.5281/zenodo.20583866**  
+Concept DOI: **10.5281/zenodo.20583865**  
 License: **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**  
 SPDX License ID: **CC-BY-NC-SA-4.0**  
-Copyright: **(C) Roman Reznikov**
+Copyright: **Copyright (C) 2026 Roman Reznikov**
 
-## What the workbook does
+## What's new in v3.0
 
-RR-framework helps assess:
+v3.0 is a stable public release based on the calibrated v2.9.46 workbook. It rounds the late 2.9.x calibration/safety branch into a cleaner release line and synchronizes workbook metadata, release documentation, DOI/ORCID attribution, and package structure.
 
-- Process maturity across key organizational domains.
-- Digitalization level and technology adoption.
-- Organizational resilience under disruption.
-- Industry-adjusted maturity gaps.
-- Crisis exposure under selected scenarios.
-- Key risks created by low maturity or weak controls.
-- Executive-level strategy packages.
-- Prioritized initiatives and roadmap waves.
-- Heatmaps, dashboards, and quality-control indicators.
+### Main changes
 
-## What's new in v2.0
+- Consolidated the v2.9.46 **calibration safety fixes** into public version **v3.0**.
+- Updated workbook version metadata in visible guidance, hidden config/docs, LINT, core properties, and custom document properties.
+- Added DOI, Concept DOI, ORCID, copyright, license, attribution, and commercial-use metadata to the workbook.
+- Added a visible attribution/citation block to **Guidelines** and matching metadata blocks to hidden `_README` and `_DOC`.
+- Preserved the current 43-sheet model architecture, formula graph, charts, validations, named ranges, and no-macro `.xlsx` format.
+- Added a new GitHub/Zenodo-style document package with release notes, changelog, citation file, methodology, architecture, scoring logic, roadmap, data dictionary, admin guide, and release audit.
 
-v2.0 is a major **architecture refactor and integrity-hardening** release. The calculation model is preserved, but the workbook is rebuilt on a clean, layered structure that is easier to navigate, audit, and extend.
+## Workbook metrics
 
-- **Layered architecture (20 tabs).** Consolidated to **9 visible workflow sheets**, **7 hidden data/config sheets**, and **4 very-hidden protected engines**, replacing the previous mixed 28-tab layout. A strict naming convention separates concerns: `_DATA_*` (normalized facts), `_ENGINE_*` (Risk, Crisis, Strategy, Initiatives, Fuzzy posture), `_CONFIG_*` (model settings, risk calibration), `_REF_*` (reference content).
-- **Linear workflow.** The visible journey is a clean six-step path: Company Profile -> Assessment Questions -> AS-IS Assessment -> Resilience & Risk Scenario -> Action Plan & Roadmap -> Model Calibration.
-- **Single source of truth.** All tunable parameters live in `_CONFIG_Model_Settings` and `_CONFIG_Risk_Calibration`; engines and presentation no longer duplicate calibration.
-- **Structured Excel Tables.** The two growth lists - `_ENGINE_Initiatives` (`tblInitiatives`) and `_ENGINE_Strategy` (`tblStrategy`) - are now native Excel Tables, so adding initiatives or strategies auto-extends the column formulas. This is the foundation for the upcoming dynamic-range and quantitative-modeling work.
-- **Integrity verified.** 55,096 formulas with **zero `#REF!`** and no broken cross-sheet references after the rename; the original `RecommendationMatrixTable` is preserved; data validations, conditional formatting, the chart, drawings, and comments are intact. The file opens cleanly in Microsoft Excel and LibreOffice with no repair prompt.
+| Metric | Value |
+|---|---:|
+| Workbook sheets | 43 |
+| Visible sheets | 6 |
+| Hidden sheets | 37 |
+| XML cell records | 173,829 |
+| Formulas | 90,275 |
+| Named ranges | 121 |
+| Data validations | 51 |
+| Conditional formatting blocks | 37 |
+| Charts | 6 |
+| Formula error tokens in XML | 0 |
+| Excel error cells in XML | 0 |
+| External links | 0 |
+| Macros / VBA | 0 |
 
-See [CHANGELOG.md](CHANGELOG.md) and [RELEASE_NOTES_v2.0.md](RELEASE_NOTES_v2.0.md). Earlier public history is in [RELEASE_NOTES_v1.67.md](RELEASE_NOTES_v1.67.md).
+## Model content summary
 
-## Who can use it
+| Content area | Count |
+|---|---:|
+| Assessment questions | 424 |
+| Business domains | 17 |
+| Subdomains | 76 |
+| Risk-library rows | 424 |
+| Score-specific risk statements | 2,544 |
+| Score-specific treatment statements | 2,544 |
+| Initiatives | 72 |
+| Strategies | 14 |
+| Crisis scenarios | 12 |
+| Crisis × domain multiplier rows | 204 |
+| Industry templates | 10 |
+| Industry aliases | 42 |
+| Capability taxonomy items | 37 |
+| Capability bridge rows | 98 |
+| Risk → initiative mapping rows | 424 |
+| Backend data dictionary fields | 310 |
+| Monte Carlo iterations | 2,000 |
 
-- CEOs, COOs, CIOs, CTOs, CFOs, and transformation leaders.
-- Risk, resilience, continuity, and operations teams.
-- Consultants and advisors working on resilience, digital maturity, transformation, and crisis readiness.
-- Researchers and educators working with digital transformation, strategic resilience, and organizational maturity models.
+## Repository package
 
-## Intended use
+- `workbook/RR-framework_v3.0.xlsx` — public workbook.
+- `README.md` — overview and release summary.
+- `RELEASE_NOTES_v3.0.md` — release details.
+- `CHANGELOG.md` — version history.
+- `CITATION.cff` — machine-readable citation metadata.
+- `LICENSE.md`, `NOTICE.md`, `DISCLAIMER.md`, `AUTHORS.md` — legal and attribution documents.
+- `docs/` — user, methodology, scoring, architecture, data dictionary and admin documentation.
+- `releases/checksums.txt` — SHA-256 checksums for release artifacts.
 
-The workbook is intended for diagnostic and advisory use. It is not a formal certification, legal audit, financial audit, cybersecurity audit, compliance audit, or substitute for professional judgment.
-
-Typical use flow:
+## Recommended use
 
 1. Open the workbook in Microsoft Excel desktop.
-2. Start on the **① START HERE** sheet and follow the recommended flow.
-3. Complete the **Company Profile**.
-4. Answer the **Assessment Questions**.
-5. Review **AS-IS Assessment** (current-state maturity, gaps, data quality).
-6. Select a crisis scenario and severity on **Resilience & Risk Scenario**.
-7. Review **Action Plan & Roadmap** for recommendations, prioritized initiatives, and waves.
-8. Use the results as a structured input for management discussion and resilience planning.
+2. Start on **Guidelines**.
+3. Fill **Company Profile**.
+4. Complete **Assessment Questions**.
+5. Select crisis scenario and severity in **Resilience & Risk Scenario**.
+6. Review **AS-IS Assessment** and **Action Plan & Roadmap**.
+7. Recalculate before formal export: Excel → Formulas → Calculation Options → Automatic, then `Ctrl+Alt+F9`, save.
 
-## Workbook structure
+## License and commercial-use note
 
-The 20-tab workbook is organized into four logical layers:
+RR-framework is licensed under **CC BY-NC-SA 4.0**. Non-commercial use, review, adaptation, and sharing are allowed under the license terms and attribution requirements. Commercial delivery, resale, white-labeling, or integration into commercial products requires separate written permission from Roman Reznikov.
 
-| Layer | Visibility | Sheets |
-|---|---|---|
-| Workflow | Visible (9) | ① START HERE, Release & QA, Methodology Controls & Std, Company Profile, Assessment Questions, AS-IS Assessment, Resilience & Risk Scenario, Action Plan & Roadmap, Model Calibration. |
-| Data layer | Hidden | `_DATA_Assessment_Model`, `_DATA_Dashboard_Facts`, `_DATA_Mappings`. |
-| Config & reference | Hidden | `_CONFIG_Model_Settings`, `_CONFIG_Risk_Calibration`, `_REF_Model_Content`, `_ENGINE_Fuzzy_Posture`. |
-| Engines (protected) | Very hidden | `_ENGINE_Risk`, `_ENGINE_Crisis`, `_ENGINE_Strategy`, `_ENGINE_Initiatives`. |
 
-More details are in [docs/WORKBOOK_ARCHITECTURE.md](docs/WORKBOOK_ARCHITECTURE.md).
 
-## License and attribution
+---
 
-The workbook, methodology, questionnaires, scoring model, risk library, strategy package logic, crisis simulation logic, and documentation are licensed under **CC BY-NC-SA 4.0**.
-
-You may use, share, and adapt this work for non-commercial purposes if you:
-
-- Give appropriate attribution to **Roman Reznikov**.
-- Link back to the original repository.
-- Indicate whether changes were made.
-- Share adaptations under the same license.
-- Do not remove attribution notices from workbook copies or derivative documentation.
-
-Commercial use, including paid consulting delivery using this workbook or derivative versions, requires separate written permission from the author.
-
-See [LICENSE.md](LICENSE.md) and [NOTICE.md](NOTICE.md).
-
-## Citation
-
-If you use this workbook or methodology in research, education, consulting materials, or public documentation, please cite it using the metadata in [CITATION.cff](CITATION.cff).
-
-Recommended citation:
-
-> Reznikov, Roman. RR-framework: Business Resilience and Digital Maturity Assessment Workbook. Version 2.0, 2026. https://github.com/RR009N/RR-framework
-
-## Disclaimer
-
-RR-framework is provided "as is". It does not guarantee completeness, accuracy, compliance, certification readiness, financial outcomes, security posture, or crisis survival. Users remain responsible for validating outputs, assumptions, risks, controls, and recommendations in their own organizational context.
-
-See [DISCLAIMER.md](DISCLAIMER.md).
-
-## Repository contents
-
-```text
-.
-├── README.md
-├── LICENSE.md
-├── NOTICE.md
-├── CITATION.cff
-├── CHANGELOG.md
-├── DISCLAIMER.md
-├── CONTRIBUTING.md
-├── SECURITY.md
-├── RELEASE_NOTES_v2.0.md
-├── RELEASE_NOTES_v1.67.md
-├── VERSION
-├── workbook/
-│   └── RR-framework_v2.0.xlsx
-├── releases/
-│   └── checksums.txt
-└── docs/
-    ├── USER_GUIDE.md
-    ├── METHODOLOGY.md
-    ├── WORKBOOK_ARCHITECTURE.md
-    ├── ADMIN_GUIDE.md
-    ├── DATA_DICTIONARY.md
-    ├── SCORING_LOGIC.md
-    ├── CRISIS_SCENARIOS.md
-    ├── FORMS_INTEGRATION.md
-    ├── RELEASE_CHECKLIST.md
-    ├── ROADMAP.md
-    └── FAQ.md
-```
-
-## Download
-
-Use the workbook from the `workbook/` folder or from the latest GitHub Release.
-
-Always verify that the version, build ID, and checksum match the release documentation.
+**Attribution:** RR-framework v3.0 — Copyright (C) 2026 Roman Reznikov.  
+**Author:** Roman Reznikov. ORCID: https://orcid.org/0000-0001-5581-5651.  
+**DOI:** 10.5281/zenodo.20583866. Concept DOI: 10.5281/zenodo.20583865.  
+**License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0). Commercial use requires separate written permission.
